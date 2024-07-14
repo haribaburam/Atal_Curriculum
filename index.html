@@ -105,8 +105,10 @@
             <div class="tab" onclick="showTab('exploring')">Exploring Electronics</div>
             <div class="tab" onclick="showTab('mechanical')">Basic Mechanical Engineering</div>
             <div class="tab" onclick="showTab('projects')">Integrated Projects</div>
-            <div class="tab" onclick="showTab(event, 'resources')">Resources</div>
+            <div class="tab" onclick="showTab('resources')">Resources</div>
+            <div class="tab" onclick="showTab('team_requests')">Team Requests</div>
         </div>
+   
 
         <div id="introduction" class="tab-content active">
             <table>
@@ -406,26 +408,61 @@
     </table>
 </div>
 
+<div id="team_requests" class="tab-content">
+    <table>
+        <thead>
+            <tr>
+                <th>Request ID</th>
+                <th>Team Name</th>
+                <th>Request Description</th>
+                <th>Request Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Team Velliangadu</td>
+                <td>Requesting Magnets, Steel rods, Weight machine, Fasteners, Sample metal sheet. Project topics for home work to be prepared for initial mech. classes</td>
+                <td>2024-07-12</td>
+                <td>Pending</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Empty</td>
+                <td>Empty</td>
+                <td>2024-07-03</td>
+                <td>Pending</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Empty</td>
+                <td>Empty</td>
+                <td>2024-07-05</td>
+                <td>Pending</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-    <script>
-    const tabs = document.querySelectorAll('.tabs div');
-    const tabContents = document.querySelectorAll('.tab-content');
+<script>
+    function showTab(tabId) {
+        // Hide all tab contents
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabContents.forEach(content => content.classList.remove('active'));
 
-    tabs.forEach((tab, index) => {
-        tab.addEventListener('click', () => {
-            tabContents.forEach((content, contentIndex) => {
-                content.style.display = contentIndex === index ? 'block' : 'none';
-            });
+        // Remove active class from all tabs
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => tab.classList.remove('active'));
 
-            tabs.forEach(tab => tab.classList.remove('active'));
-            tab.classList.add('active');
-        });
-    });
+        // Show the selected tab content
+        document.getElementById(tabId).classList.add('active');
 
-    // Initialize the first tab as active
-    tabs[0].classList.add('active');
-    tabContents[0].style.display = 'block';
-   </script>
+        // Add active class to the selected tab
+        event.currentTarget.classList.add('active');
+    }
+</script>
+
 
 </body>
 
