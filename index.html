@@ -1,332 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electronics and Mechanical Engineering Curriculum</title>
+    <title>Atal Module 1 Curriculum</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            line-height: 1.6;
         }
+
         .container {
             width: 90%;
-            margin: auto;
-            overflow: hidden;
+            margin: 0 auto;
+            overflow: auto;
         }
-        header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #0779e4 3px solid;
-        }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-        header li {
-            display: inline;
-            padding: 0 20px;
-        }
-        header #branding {
-            float: left;
-        }
-        header #branding h1 {
-            margin: 0;
-        }
-        header nav {
-            float: right;
-            margin-top: 10px;
-        }
-        @media (max-width: 600px) {
-            header nav {
-                float: none;
-                text-align: center;
-            }
-            header li {
-                display: block;
-                margin-bottom: 10px;
-            }
-        }
-        .main-content {
-            background: #fff;
+
+        h1 {
+            text-align: center;
             padding: 20px;
-            margin-top: 20px;
+            background-color: #0073e6;
+            color: white;
         }
+
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background-color: #0073e6;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .tab:hover {
+            background-color: #005bb5;
+        }
+
+        .tab.active {
+            background-color: #005bb5;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
         table {
             width: 100%;
-            margin-bottom: 20px;
             border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: white;
         }
-        table, th, td {
+
+        th, td {
+            padding: 10px;
+            text-align: left;
             border: 1px solid #ddd;
         }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
+
         th {
             background-color: #f2f2f2;
         }
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: #000;
-            color: #fff;
-            padding: 8px;
-            z-index: 100;
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
         }
-        .skip-link:focus {
-            top: 0;
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .table-title {
+            background-color: #e6f7ff;
+            font-weight: bold;
         }
     </style>
 </head>
+
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <header role="banner">
-        <div class="container">
-            <div id="branding">
-                <h1>Electronics and Mechanical Engineering Curriculum</h1>
-            </div>
-            <nav role="navigation">
-                <ul>
-                    <li><a href="#intro-to-basic-electronics">Basic Electronics</a></li>
-                    <li><a href="#exploring-electronics">Exploring Electronics</a></li>
-                    <li><a href="#basic-mechanical-engineering">Mechanical Engineering</a></li>
-                    <li><a href="#integrated-projects">Projects</a></li>
-                </ul>
-            </nav>
+    <div class="container">
+        <h1>Atal Module 1 Curriculum</h1>
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('introduction')">Introduction to Basic Electronics</div>
+            <div class="tab" onclick="showTab('exploring')">Exploring Electronics</div>
+            <div class="tab" onclick="showTab('mechanical')">Basic Mechanical Engineering</div>
+            <div class="tab" onclick="showTab('projects')">Integrated Projects</div>
+            <div class="tab" onclick="showTab(event, 'resources')">Resources</div>
         </div>
-    </header>
-    <main id="main-content" class="container">
-        <section id="intro-to-basic-electronics" class="main-content">
-            <h2>Introduction to Basic Electronics</h2>
-            <table role="table">
+
+        <div id="introduction" class="tab-content active">
+            <table>
                 <thead>
                     <tr>
-                        <th scope="col">Week</th>
-                        <th scope="col">Topic</th>
-                        <th scope="col">Exercise</th>
-                        <th scope="col">Reference</th>
-                        <th scope="col">YouTube Video Link</th>
+                        <th>Week</th>
+                        <th>Topic</th>
+                        <th>Exercise</th>
+                        <th>Reference</th>
+                        <th>YouTube Video Link</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <tr class="table-title">
+                        <td colspan="5">Introduction to Basic Electronics</td>
+                    </tr>
                     <tr>
                         <td>1 & 2</td>
                         <td>Introduction to ATL, Safety Guidelines, and Basic Tools</td>
                         <td>Identify and label basic electronic components (resistors, capacitors, LEDs) on a breadboard.</td>
                         <td>
-                            <a href="https://www.niti.gov.in/atal-innovation-mission-aim" target="_blank">Introduction to ATL</a><br>
-                            <a href="https://www.sciencebuddies.org/science-fair-projects/science-fair/safety-guidelines" target="_blank">Safety Guidelines</a>
+                            <a href="https://www.aim.gov.in/atl.php">Introduction to ATL</a><br>
+                            <a href="https://aim.gov.in/pdf/ATL_Safety_Guideline.pdf">ATL Safety Guidelines</a>
                         </td>
-                        <td><a href="https://www.youtube.com/watch?v=blJc7-j5ZXU" target="_blank">YouTube Video: Basic Electronics Lab Safety</a></td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=LnHwXDjSW2E">Watch Video</a>
+                        </td>
                     </tr>
                     <tr>
                         <td>3 & 4</td>
                         <td>Understanding Electrical Circuits: Series and Parallel</td>
                         <td>Build and test simple LED circuits using series and parallel connections.</td>
-                        <td><a href="https://www.electronics-tutorials.ws/resistor/res_3.html" target="_blank">Series and Parallel Circuits</a></td>
-                        <td><a href="https://www.youtube.com/watch?v=rx0a5jq9kQo" target="_blank">Series and Parallel Circuits Explained</a></td>
+                        <td>
+                            <a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-7/what-is-a-series-parallel-circuit/">Series-Parallel Circuit</a><br>
+                            <a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-5/what-are-series-and-parallel-circuits/">Series and Parallel Circuits</a>
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=8Z0jhQeYDUE">Watch Video</a>
+                        </td>
                     </tr>
                     <tr>
                         <td>5 & 6</td>
                         <td>Introduction to Components: Resistors, Capacitors, and LEDs</td>
                         <td>Measure and record the voltage and current across different resistor values in a circuit.</td>
-                        <td><a href="https://www.electronics-tutorials.ws/" target="_blank">Introduction to Components</a></td>
-                        <td><a href="https://www.youtube.com/watch?v=6Maq5IyHSuc" target="_blank">Resistors, Capacitors, and LEDs Basics</a></td>
+                        <td>
+                            <a href="http://www.electronics-tutorials.ws/">Electronics Tutorials</a>
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=58PzPrjGsG8">Watch Video</a>
+                        </td>
                     </tr>
                     <tr>
                         <td>7 & 8</td>
                         <td>Breadboarding and Prototyping: Hands-on Circuit Building</td>
                         <td>Design and implement a circuit to control the brightness of an LED using a potentiometer.</td>
-                        <td><a href="https://www.build-electronic-circuits.com/how-to-use-a-breadboard/" target="_blank">Breadboarding Basics</a></td>
-                        <td><a href="https://www.youtube.com/watch?v=oiqNaSPTI7w" target="_blank">Breadboarding Tutorial</a></td>
+                        <td>
+                            <a href="https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/all">Breadboarding Tutorial</a>
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=6WReFkfrUIk">Watch Video</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
-        </section>
+        </div>
 
-        <section id="exploring-electronics" class="main-content">
-            <h2>Exploring Electronics</h2>
-            <table role="table">
+        <div id="exploring" class="tab-content">
+            <table>
                 <thead>
                     <tr>
-                        <th scope="col">Week</th>
-                        <th scope="col">Topic</th>
-                        <th scope="col">Exercise</th>
-                        <th scope="col">Reference</th>
-                        <th scope="col">YouTube Video Link</th>
+                        <th>Week</th>
+                        <th>Topic</th>
+                        <th>Exercise</th>
+                        <th>Reference</th>
+                        <th>YouTube Video Link</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <tr class="table-title">
+                        <td colspan="5">Exploring Electronics</td>
+                    </tr>
                     <tr>
                         <td>9 & 10</td>
                         <td>Introduction to Sensors: Light, Temperature, and Sound Sensors</td>
                         <td>Interface a light sensor with an Arduino and display the readings on a serial monitor.</td>
                         <td>
-                            <a href="https://www.electronicshub.org/introduction-to-sensors/" target="_blank">Introduction to Sensors</a><br>
-                            <a href="https://www.elprocus.com/different-types-of-sensors-with-applications/" target="_blank">Types of Sensors</a>
+                            <a href="https://www.electronicshub.org/sensors-and-transducers-introduction/">Introduction to Sensors</a><br>
+                            <a href="http://www.elprocus.com/different-types-of-sensors/">Types of Sensors</a>
                         </td>
-                        <td><a href="https://www.youtube.com/watch?v=6wcBjeZfFgs" target="_blank">Introduction to Sensors</a></td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=J2ulD-bPTS4">Watch Video 1</a><br>
+                            <a href="https://www.youtube.com/watch?v=w3Hfj2kMrGo">Watch Video 2</a><br>
+                            <a href="https://www.youtube.com/watch?v=fhp61CepgUg">Watch Video 3</a>
+                        </td>
                     </tr>
                     <tr>
                         <td>11 & 12</td>
                         <td>Interfacing Sensors with Arduino</td>
                         <td>Program an Arduino to control a motor based on temperature readings from a sensor.</td>
                         <td>
-                            <a href="https://www.circuitdigest.com/microcontroller-projects/arduino-sensor-projects" target="_blank">Interfacing Sensors with Arduino</a><br>
-                            <a href="https://www.tutorialspoint.com/arduino/arduino_sensors.htm" target="_blank">Arduino Sensor Tutorial</a>
+                            <a href="https://circuitdigest.com/microcontroller-projects">Interfacing Sensors with Arduino</a><br>
+                            <a href="https://www.tutorialspoint.com/arduino/index.htm">Arduino Sensor Tutorial</a>
                         </td>
-                        <td><a href="https://www.youtube.com/watch?v=wpwp-MZKcEc" target="_blank">Arduino Sensor Interface</a></td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=q9UCSynDEw8">Watch Video</a>
+                        </td>
                     </tr>
                     <tr>
                         <td>13 & 14</td>
                         <td>Introduction to Motors: DC Motors and Motor Control</td>
                         <td>Design and build a basic obstacle avoidance robot using a motor and ultrasonic sensor.</td>
                         <td>
-                            <a href="https://www.electronics-tutorials.ws/io/io_5.html" target="_blank">Introduction to DC Motors</a><br>
-                            <a href="https://www.electronicshub.org/dc-motor-control-using-arduino/" target="_blank">DC Motor Control with Arduino</a>
+                            <a href="https://www.electronicshub.org/dc-motor/">Introduction to DC Motors</a><br>
+                            <a href="http://www.elprocus.com/what-are-the-best-ways-to-control-the-speed-of-dc-motor/">Motor Control Techniques</a>
                         </td>
-                        <td><a href="https://www.youtube.com/watch?v=Bk8i2B8Kq5s" target="_blank">DC Motor Control</a></td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=CWulQ1ZSE3c">Watch Video</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>15 & 16</td>
+                        <td>Building Simple Robotics: Motorized Vehicles and Basic Manipulators</td>
+                        <td>Incorporate a servo motor into a robotic arm and program it to perform simple movements.</td>
+                        <td>
+                            <a href="https://community.robotshop.com/tutorials/show/how-to-make-a-robot-lesson-1-getting-started">Introduction to Robotics</a><br>
+                            <a href="http://www.robotictutorials.com/tutorials/robots/">Basic Robot Design Principles</a>
+                        </td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=7mm4ig8Lyc8">Watch Video</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
-        </section>
+        </div>
 
-        <section id="basic-mechanical-engineering" class="main-content">
-            <h2>Basic Mechanical Engineering Concepts</h2>
-            <table role="table">
+        <div id="mechanical" class="tab-content">
+            <table>
                 <thead>
                     <tr>
-                        <th scope="col">Week</th>
-                        <th scope="col">Topic</th>
-                        <th scope="col">Exercise</th>
-                        <th scope="col">Reference</th>
-                        <th scope="col">YouTube Video Link</th>
+                        <th>Week</th>
+                        <th>Topic</th>
+                        <th>Exercise</th>
+                        <th>Reference</th>
+                        <th>YouTube Video Link</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>15 & 16</td>
-                        <td>Introduction to Mechanical Design and Engineering Drawing</td>
-                        <td>Create simple engineering drawings of mechanical components using CAD software.</td>
-                        <td>
-                            <a href="https://www.engineering.com/DesignSoftware/DesignSoftwareArticles/ArticleID/16707/The-Basics-of-Mechanical-Engineering-Design.aspx" target="_blank">Mechanical Design Fundamentals</a>
-                        </td>
-                        <td><a href="https://www.youtube.com/watch?v=qgM--RcKgs4" target="_blank">Introduction to Mechanical Engineering</a></td>
+                    <tr class="table-title">
+                        <td colspan="5">Basic Mechanical Engineering</td>
                     </tr>
                     <tr>
                         <td>17 & 18</td>
-                        <td>Introduction to Gears and Mechanisms</td>
-                        <td>Design a gear train system for a specific mechanical application.</td>
+                        <td>Materials in Mechanical Engineering</td>
+                        <td>Materials in Mechanical Engineering" is a foundational topic that explores the various materials used in the design and manufacturing of mechanical systems. This includes understanding the properties, applications, and selection criteria for metals, polymers, ceramics, and composites. A thorough knowledge of these materials helps engineers to choose the right material for specific applications, ensuring efficiency, durability, and cost-effectiveness in mechanical designs.</td>
                         <td>
-                            <a href="https://www.engineering.com/DesignSoftware/DesignSoftwareArticles/ArticleID/16707/The-Basics-of-Mechanical-Engineering-Design.aspx" target="_blank">How Mechanisms Work</a><br>
-                            <a href="https://www.explainthatstuff.com/gears-pulleys.html" target="_blank">Gears, Pulleys, and Linkages Overview</a>
+                            <a href="https://mechanicalc.com/reference/engineering-materials">Materials Overview</a><br>
+                            <a href="https://engineeringtechnology.org/engineering-materials/mechanical-properties-of-materials/">Mechanical Properties</a>
                         </td>
-                        <td><a href="https://www.youtube.com/watch?v=07bD2zA14-Q" target="_blank">Mechanical Systems Explained</a></td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=KX1_NqNTIqw&list=PLjk-OqI4WmPLouP4pNzFV4aOawQbNwNPi">Watch Video</a>
+                        </td>
                     </tr>
                     <tr>
                         <td>19 & 20</td>
-                        <td>Basics of 3D Modeling and CAD Software</td>
-                        <td>Calculate gear ratios and design a gear train system for a specific mechanical application.</td>
+                        <td>Mechanical Measurements and Drawing</td>
+                        <td>Mechanical Measurements and Drawing" is a critical area in mechanical engineering that focuses on the accurate measurement of physical dimensions and the creation of technical drawings. These skills are essential for designing, manufacturing, and inspecting mechanical components and systems. Mechanical measurements ensure that components meet specified tolerances, while technical drawings provide detailed visual representations of components, including dimensions, tolerances, and material specifications.</td>
                         <td>
-                            <a href="https://www.all3dp.com/2/what-is-3d-modeling-3d-cad-3d-design-simply-explained/" target="_blank">Introduction to 3D Modeling</a><br>
-                            <a href="https://www.autodesk.com/solutions/cad-software" target="_blank">CAD Software Overview</a>
+                            <a href="https://www.machinemfg.com/principles-of-mechanical-drafting/">Principles of Mechanical Drafting</a><br>
+                            <a href="https://www.machinemfg.com/dimensioning-of-engineering-drawings/">Dimensioning Best Practices</a>
                         </td>
-                        <td><a href="https://www.youtube.com/watch?v=atM0DP1Vnj4" target="_blank">Introduction to CAD Software</a></td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=1KHEfi7aZDc&list=PLQmc-I2-FO2HCB1hEYe5WUW2RQUmfy8C2">Watch Video</a>
+                        </td>
                     </tr>
                     <tr>
                         <td>21 & 22</td>
                         <td>Prototyping Mechanical Designs using 3D Printers</td>
                         <td>Prototype a mechanism using gears and pulleys to lift a small load.</td>
                         <td>
-                            <a href="https://www.matterhackers.com/3d-printing-101" target="_blank">Introduction to 3D Printing</a><br>
-                            <a href="https://www.3dnatives.com/en/3d-printer-guide-150320174/" target="_blank">Choosing the Right 3D Printer</a>
+                            <a href="https://www.matterhackers.com/articles/3d-printing-beginner-guides-collection">Introduction to 3D Printing</a><br>
+                            <a href="https://formlabs.com/asia/3d-printers/">Choosing the Right 3D Printer</a>
                         </td>
-                        <td><a href="https://www.youtube.com/watch?v=ZhS9NgI4VnY" target="_blank">3D Printing Basics</a></td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=jmgYrKjTPJc">Watch Video</a>
+                        </td>
                     </tr>
                     <tr>
                         <td>23 & 24</td>
                         <td>Introduction to Mechanical Systems: Gears, Pulleys, and Linkages</td>
                         <td>Build a linkage mechanism that converts rotary motion into linear motion.</td>
                         <td>
-                            <a href="https://www.me-mechanicalengineering.com/mechanical-systems/" target="_blank">Introduction to Mechanical Systems</a><br>
-                            <a href="https://www.explainthatstuff.com/gears-pulleys.html" target="_blank">Gears, Pulleys, and Linkages Overview</a>
+                            <a href="https://www.me.columbia.edu/what-Mechanical-engineering">Introduction to Mechanical Systems</a><br>
+                            <a href="https://www.explainthatstuff.com/pulleys.html">Gears, Pulleys, and Linkages Overview</a>
                         </td>
-                        <td><a href="https://www.youtube.com/watch?v=07bD2zA14-Q" target="_blank">Mechanical Systems Explained</a></td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=H3Mve7ZVG8A">Watch Video</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
-        </section>
+        </div>
 
-        <section id="integrated-projects" class="main-content">
-            <h2>Integrated Projects</h2>
-            <table role="table">
+        <div id="projects" class="tab-content">
+            <table>
                 <thead>
                     <tr>
-                        <th scope="col">Week</th>
-                        <th scope="col">Topic</th>
-                        <th scope="col">Exercise</th>
-                        <th scope="col">Reference</th>
-                        <th scope="col">YouTube Video Link</th>
+                        <th>Week</th>
+                        <th>Topic</th>
+                        <th>Exercise</th>
+                        <th>Reference</th>
+                        <th>YouTube Video Link</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <tr class="table-title">
+                        <td colspan="5">Integrated Projects</td>
+                    </tr>
                     <tr>
                         <td>25 & 26</td>
                         <td>Design and Build an Automated Plant Watering System</td>
                         <td>Design and construct a prototype of an automated plant watering system using available materials.</td>
                         <td>
-                            <a href="https://www.instructables.com/How-to-Make-an-Automatic-Plant-Watering-System/" target="_blank">Automated Plant Watering System Design Guide</a><br>
-                            <a href="https://create.arduino.cc/projecthub/irjet/automatic-plant-watering-system-using-arduino-cc6e68" target="_blank">Arduino-Based Plant Watering System Tutorial</a>
+                            <a href="https://www.instructables.com/Automated-Plant-Watering-System/">Automated Plant Watering System Design Guide</a><br>
+                            <a href="https://projecthub.arduino.cc/Saikan45/automated-watering-plant-fe5d5c">Arduino-Based Plant Watering System Tutorial</a>
                         </td>
-                        <td><a href="https://www.youtube.com/watch?v=2AikG5t0Tqg" target="_blank">DIY Automatic Plant Watering System</a></td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=iwkE_HWU-6M">Watch Video</a>
+                        </td>
                     </tr>
                     <tr>
                         <td>27 & 28</td>
                         <td>Construct a Smart Weather Station with Sensors and Arduino</td>
                         <td>Program a weather station to collect data from various sensors and display it on an LCD screen.</td>
                         <td>
-                            <a href="https://www.hackster.io/projects/tags/weather" target="_blank">Smart Weather Station Project Overview</a><br>
-                            <a href="https://www.digikey.com/en/maker/projects/how-to-select-sensors-for-a-weather-station/51ee5af3f30a40e888e94e0e7b5b0b0d" target="_blank">Weather Station Sensor Selection Guide</a>
+                            <a href="http://www.hackster.io/projects/tags/weather">Smart Weather Station Project Overview</a><br>
+                            <a href="https://www.digikey.in/en/videos/t/te-connectivity/create-a-weather-station-with-te-connectivity-sensors--another-geek-moment">Weather Station Sensor Selection Guide</a>
                         </td>
-                        <td><a href="https://www.youtube.com/watch?v=g0pSfyXOXpU" target="_blank">DIY Weather Station with Arduino</a></td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=ZhOhBuKC80M">Watch Video</a>
+                        </td>
                     </tr>
                     <tr>
                         <td>29 & 30</td>
                         <td>Design and Build a Simple Robotic Arm with Servo Motors</td>
                         <td>Construct a robotic arm prototype and program it to perform specific tasks (e.g., picking and placing objects).</td>
                         <td>
-                            <a href="https://www.instructables.com/How-to-Make-a-Robotic-Arm/" target="_blank">DIY Robotic Arm Project Guide</a><br>
-                            <a href="https://www.robotshop.com/community/tutorials/show/servo-motor-control-with-arduino" target="_blank">Servo Motor Basics and Applications</a>
+                            <a href="http://www.instructables.com/How-to-Make-a-Robotic-Arm/">DIY Robotic Arm Project Guide</a><br>
+                            <a href="https://community.robotshop.com/tutorials/show/arduino-5-minute-tutorials-lesson-5-servo-motors">Servo Motor Basics and Applications</a>
                         </td>
-                        <td><a href="https://www.youtube.com/watch?v=RVkwWo_LNZs" target="_blank">DIY Robotic Arm Tutorial</a></td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=8jAYD4B7gXE">Watch Video</a>
+                        </td>
                     </tr>
                     <tr>
                         <td>31 & 32</td>
                         <td>Develop a Solar-Powered Mobile Charging Station</td>
                         <td>Build a portable solar charger and test its effectiveness in charging different devices.</td>
                         <td>
-                            <a href="https://www.solarpowerworldonline.com/2020/05/7-diy-solar-power-projects-mobile-charging-station/" target="_blank">Solar Mobile Charging Station Design Ideas</a><br>
-                            <a href="https://www.instructables.com/DIY-Solar-Powered-USB-Charging-Station/" target="_blank">Solar Panel and Battery Selection Guide</a>
+                            <a href="https://www.instructables.com/Solar-Powered-Cell-Phone-Charger-Circuit/">Solar Mobile Charging Station Design Ideas</a><br>
+                            <a href="https://www.instructables.com/Solar-USB-Charger-3/">Solar Panel and Battery Selection Guide</a>
                         </td>
-                        <td><a href="https://www.youtube.com/watch?v=61V8Avp0pQQ" target="_blank">DIY Solar Mobile Charging Station</a></td>
+                        <td>
+                            <a href="https://www.youtube.com/watch?v=i5y_JZRr_Fw">Watch Video</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
-        </section>
-    </main>
+        </div>
+    </div>
+    
+    <div id="resources" class="tab-content">
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Stock Register</td>
+                <td><a href="https://docs.google.com/spreadsheets/d/104bfud1MVdXgDgcgzpkTIOgQ1258KZH7/edit?usp=drive_link&ouid=112805112034195492510&rtpof=true&sd=true" target="_blank">Stock Register</a></td>
+            </tr>
+            <tr>
+                <td>Consumables</td>
+                <td><a href="https://docs.google.com/spreadsheets/d/105KZ2NPtDa9FVscQ6j92XQ8cpr-qWcTW/edit?usp=drive_link&ouid=112805112034195492510&rtpof=true&sd=true" target="_blank">Consumables</a></td>
+            </tr>
+            <tr>
+                <td>Course Material</td>
+                <td><a href="https://drive.google.com/drive/folders/17RcaXd4Q6JeKVUht24guEtY7r4MSdRrw?usp=drive_link" target="_blank">Course Material</a></td>
+            </tr>
+            <tr>
+                <td>Tracker</td>
+                <td><a href="https://docs.google.com/spreadsheets/d/1UCKchnNQJSBVJzLK3gg9fVeu7K3LnZe7/edit?usp=drive_link&ouid=112805112034195492510&rtpof=true&sd=true" target="_blank">Tracker</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+    <script>
+    const tabs = document.querySelectorAll('.tabs div');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+            tabContents.forEach((content, contentIndex) => {
+                content.style.display = contentIndex === index ? 'block' : 'none';
+            });
+
+            tabs.forEach(tab => tab.classList.remove('active'));
+            tab.classList.add('active');
+        });
+    });
+
+    // Initialize the first tab as active
+    tabs[0].classList.add('active');
+    tabContents[0].style.display = 'block';
+   </script>
+
 </body>
+
 </html>
